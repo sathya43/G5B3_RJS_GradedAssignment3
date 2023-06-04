@@ -42,7 +42,7 @@ const MovieListPage = ({ category }: Props) => {
     }
 
     fetchMovies()
-  }, [category, favorite])
+  }, [category, favorite, searchQuery])
 
   if (loading) {
     return <Spinner animation='border' />
