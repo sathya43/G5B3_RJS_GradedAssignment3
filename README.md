@@ -1,3 +1,49 @@
+Steps to run the server:
+
+The Movies on tip react app requires information from a json server running on port 3000. I have added the fake server project here. It is present in the folder fake_server. This fake server should be started before starting the expense tracker app. Follow the below steps to run the expense tracker succesfully.
+
+Step 1: Download the Code as Zip and Unzip the folder
+
+Step 2: Navigate inside the folder where src, fake_server are present
+
+Step 3: Navigate inside JsonServerForDataFetching folder
+
+ Run following commands in terminal
+
+  3. a : npm install
+
+  3. b : npm start
+
+  This ensures to run a json server that performs CRUD operations on end point
+ Loading data.json
+  Done
+
+  Resources
+  http://localhost:3001/movies-coming
+  http://localhost:3001/movies-in-theaters
+  http://localhost:3001/top-rated-india
+  http://localhost:3001/top-rated-movies
+  http://localhost:3001/favourite
+
+  Home
+  http://localhost:3001
+
+  This is prerequesite to be run for movies on tip application
+Step 4: Navigate to folder where src is present
+
+  Run following commands in terminal
+
+  4. a : npm install
+
+  4. b : npm start
+
+  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
