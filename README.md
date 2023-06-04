@@ -20,13 +20,20 @@ Step 3: Navigate inside JsonServerForDataFetching folder
 
   Resources
   http://localhost:3001/movies-coming
+  
   http://localhost:3001/movies-in-theaters
+  
   http://localhost:3001/top-rated-india
+  
   http://localhost:3001/top-rated-movies
+  
   http://localhost:3001/favourite
+  
 
   Home
+  
   http://localhost:3001
+  
 
   This is prerequesite to be run for movies on tip application
 Step 4: Navigate to folder where src is present
