@@ -1,38 +1,50 @@
 import React from 'react'
-import { Button } from 'react-bootstrap'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import '../css/QuickLinkForMoviesNavigation.css'
+import { Navbar, Nav, Container } from 'react-bootstrap'
 
 const QuickLinkForMoviesNavigation = () => {
-  const buttons = [
-    { label: 'Home', link: '/' },
-    { label: 'Coming soon', link: '/movies-coming' },
-    { label: 'Movies in Theatres', link: '/movies-in-theaters' },
-    { label: 'Top Rated Indian', link: '/top-rated-india' },
-    { label: 'Top Rated movies', link: '/top-rated-movies' },
-    { label: 'Favourite', link: '/favourite' },
-  ]
-
   return (
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        height: '8vh',
-        backgroundColor: 'gainsboro',
-      }}
-    >
-      {buttons.map((button, index) => (
-        <NavLink key={index} to={button.link} style={{ margin: '0 10px' }}>
-          <Button
-            variant='primary'
-            style={{ margin: '15px', backgroundColor: 'azure' }}
-            className='hover-button'
-          >
-            {button.label}
-          </Button>
-        </NavLink>
-      ))}
-    </div>
+    <>
+      <Navbar bg='light' variant='light'>
+        <Container>
+          <Nav className='me-auto'>
+            <div className='page'>
+              <div className='page__categories'>
+                <Nav.Link href='/' className='page__category-link'>
+                  Home
+                </Nav.Link>
+                <Nav.Link href='/movies-coming' className='page__category-link'>
+                  Upcoming
+                </Nav.Link>
+                <Nav.Link
+                  href='/movies-in-theaters'
+                  className='page__category-link'
+                >
+                  In Theatres
+                </Nav.Link>
+                <Nav.Link
+                  href='/top-rated-india'
+                  className='page__category-link'
+                >
+                  Top Rated India
+                </Nav.Link>
+                <Nav.Link
+                  href='/top-rated-movies'
+                  className='page__category-link'
+                >
+                  Top Rated Movies
+                </Nav.Link>
+                <Nav.Link href='/favourite' className='page__category-link'>
+                  Favourites
+                </Nav.Link>
+                {/* Add more category links as needed */}
+              </div>
+            </div>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
   )
 }
 
