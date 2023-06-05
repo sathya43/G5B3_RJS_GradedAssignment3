@@ -20,12 +20,17 @@ const MovieListPage = ({ category }: Props) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredMovies, setFilteredMovies] = useState<IMovieData[]>([])
   const [favorite, setFav] = useState<IMovieData[]>([])
+  const [favMoviesList, setFavMoviesList] = useState<IMovieData[]>([])
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
         let data = await getMoviesByCategory(category)
         setMovies(data)
+
+        let dataFav = await getMoviesByCategory('favourite')
+        setFavMoviesList(dataFav)
+
         if (searchQuery.length > 0) {
           const filteredMoviesTemp = movies.filter((movie) =>
             movie.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -42,7 +47,7 @@ const MovieListPage = ({ category }: Props) => {
     }
 
     fetchMovies()
-  }, [category, favorite, searchQuery])
+  }, [category, favMoviesList, searchQuery])
 
   if (loading) {
     return <Spinner animation='border' />
@@ -53,7 +58,7 @@ const MovieListPage = ({ category }: Props) => {
   }
 
   function isMovieFavorite(movie: IMovieData) {
-    return favorite.some((value) => value.id === movie.id)
+    return favMoviesList.some((value) => value.id === movie.id)
   }
 
   function handleAddToFavorites(movie: IMovieData): void {

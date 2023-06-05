@@ -11,20 +11,20 @@ import { IMovieData } from './models/IMovieData'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
-const removeEntries = async () => {
-  try {
-    const response = await getMoviesByCategory('favourite')
-    await response.map((movie: IMovieData) => {
-      removeMovieFromFavourite('favourite', movie.id)
-    })
-    console.log('Entries removed successfully!')
-    console.log('Favourites are reset succesfully')
-  } catch (error) {
-    console.error('Error removing entries:', error)
-  }
-}
+// const removeEntries = async () => {
+//   try {
+//     const response = await getMoviesByCategory('favourite')
+//     await response.map((movie: IMovieData) => {
+//       removeMovieFromFavourite('favourite', movie.id)
+//     })
+//     console.log('Entries removed successfully!')
+//     console.log('Favourites are reset succesfully')
+//   } catch (error) {
+//     console.error('Error removing entries:', error)
+//   }
+// }
 
-removeEntries()
+// removeEntries()
 
 root.render(
   <React.StrictMode>
