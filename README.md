@@ -1,3 +1,7 @@
+Here is the video link walking through the application
+
+https://drive.google.com/file/d/1fl7ThmqjGfmHdZ8JlepXlz4yKcijYprB/view?usp=drive_link
+
 Steps to run the server:
 
 The Movies on tip react app requires information from a json server running on port 3000. I have added the fake server project here. It is present in the folder fake_server. This fake server should be started before starting the expense tracker app. Follow the below steps to run the expense tracker succesfully.
